@@ -49,7 +49,7 @@ showWeather.addEventListener('click', (e) => {
    const apiKey = "6a27e4d2146bc3659597ed61da656145";2        
    let city = value; 
 
-   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
+   fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`)
    .then((resp) => {
    return resp.json();
    })
