@@ -114,13 +114,18 @@ body {
   border: 1px solid #000;
   padding: 5px 10px;
   border-radius: 10px;
-  background: #000;
+  background: #fff;
+}
+
+.welcome__nav-item:hover {
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.72);
+          box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.72);
 }
 
 .welcome__nav-link {
   display: inline-block;
   font-size: 16px;
-  color: #fff;
+  color: #000;
   text-transform: uppercase;
 }
 
@@ -149,6 +154,7 @@ body {
 }
 
 .time__block-timer {
+  margin-top: 20%;
   margin: 0 auto;
   border: 2px solid #000;
   padding: 20px;
@@ -156,7 +162,7 @@ body {
 }
 
 .time__block-timer span {
-  font-size: 24px;
+  font-size: 48px;
 }
 
 .time__back {
@@ -197,6 +203,7 @@ body {
 }
 
 .weather__item-inp {
+  border-radius: 10px;
   border: 1px solid #000;
   padding: 10px;
 }
@@ -205,6 +212,14 @@ body {
   margin: 0 0 0 20px;
   background: #fff;
   font-size: 16px;
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.weather__item-btn:hover {
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.72);
+          box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.72);
 }
 
 .weather__back {

@@ -16,6 +16,7 @@
 }
 
 .time__block-timer {
+  margin-top: 20%;
   margin: 0 auto;
   border: 2px solid #000;
   padding: 20px;
@@ -23,7 +24,7 @@
 }
 
 .time__block-timer span {
-  font-size: 24px;
+  font-size: 48px;
 }
 
 .time__back {
