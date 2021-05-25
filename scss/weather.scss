@@ -1,0 +1,36 @@
+.weather {
+   position: relative;
+   display: flex;
+   flex-direction: column;
+   background: #fff;
+   width: 33%;
+   height: 33%;
+   border-radius: 10px;
+   margin: 0 auto;
+   margin-top: 10%;   
+
+   &__item {
+      display: flex;      
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 10%;
+
+   }
+
+   &__item-inp {
+      border: 1px solid #000;
+      padding: 10px;
+   }
+
+   &__item-btn {
+      margin: 0 0 0 20px;
+      background: #fff;
+      font-size: 16px;
+
+   }
+   &__back {
+      position: absolute;
+      top: 15px;
+      left: 15px;
+   }
+}
