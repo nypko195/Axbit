@@ -188,6 +188,30 @@ body {
   margin-top: 10%;
 }
 
+.weather__result {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.weather__result-city {
+  font-size: 14px;
+  padding: 10px;
+}
+
+.weather__result-degree {
+  font-size: 14px;
+  margin: 0 0 0 20px;
+  padding: 10px;
+}
+
 .weather__item {
   display: -webkit-box;
   display: -ms-flexbox;
