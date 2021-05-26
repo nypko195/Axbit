@@ -11,17 +11,19 @@
       <h2 class="weather__title title">Погода</h2>
          <div class="weather__result">
             <p class="weather__result-city"></p>
-            <p class="weather__result-degree"></p>
+            <p class="weather__result-degree"></p> 
+            <span class="weather__result-close">x</span>
          </div>
-         <div class="weather__item">
+         <form class="weather__item">
             <input class="weather__item-inp"
             type="text"
             placeholder="Введите Ваш город"
-            name="weather">
-            <button class="weather__item-btn">Показать погоду</button>            
-         </div>
-      <a class="weather__back" href="index.html">X</a>
-   </section>      
-   <script src="js/main.js"></script>  
+            name="weather">           
+            <button class="weather__item-btn">Показать погоду</button>                       
+         </form>
+         <p class="weather__error">Что-то пошло не так...</p>
+      <a class="weather__back" href="index.html">X</a>      
+   </section>     
+   <script src="js/modules/weather.js"></script>  
 </body>
 </html>

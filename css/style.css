@@ -74,7 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /*--------------------*/
 body {
-  background: #333;
+  background: #A4EFF9;
   overflow: hidden;
 }
 
@@ -202,12 +202,13 @@ body {
 }
 
 .weather__result-city {
-  font-size: 14px;
+  font-size: 24px;
   padding: 10px;
 }
 
 .weather__result-degree {
-  font-size: 14px;
+  position: relative;
+  font-size: 24px;
   margin: 0 0 0 20px;
   padding: 10px;
 }
@@ -230,6 +231,7 @@ body {
   border-radius: 10px;
   border: 1px solid #000;
   padding: 10px;
+  position: relative;
 }
 
 .weather__item-btn {
@@ -244,6 +246,14 @@ body {
 .weather__item-btn:hover {
   -webkit-box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.72);
           box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.72);
+}
+
+.weather__error {
+  display: none;
+  margin: 0 auto;
+  color: red;
+  font-size: 18px;
+  margin-top: 10px;
 }
 
 .weather__back {
