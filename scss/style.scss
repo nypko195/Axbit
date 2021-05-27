@@ -19,6 +19,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 
 
 body {
+   max-width: 1200px;
    background: #A4EFF9;  
    overflow: hidden; 
 }
@@ -30,18 +31,15 @@ body {
    height: 33%;
    border-radius: 10px;
    margin: 0 auto;
-   margin-top: 10%;   
-
+   margin-top: 10%;
    &__nav {
       display: flex;      
       flex-direction: row;
       justify-content: center;
       margin-top: 10%;
    }
-
    &__nav-item {
-      list-style: none;
-      margin: 0 0 0 20px;
+      list-style: none;     
       border: 1px solid #000;
       padding: 5px 10px;
       border-radius: 10px;
@@ -49,8 +47,10 @@ body {
       &:hover {
          box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.72);
       }
+      &:last-child {
+         margin: 0 0 0 20px;
+      }
    }
-
    &__nav-link {
       display: inline-block;
       font-size: 16px;
@@ -58,14 +58,29 @@ body {
       text-transform: uppercase;      
    }
 }
-
+/*======================*/
+@media (max-width: 992px) {
+   .welcome {
+      &__nav {
+         flex-direction: column;
+      }
+      &__nav-item {
+         text-align: center;
+         width: 90%;
+         margin: 0 5%;
+      }
+      &__nav-item:last-child {         
+         margin-left: 0; 
+         margin: 10px 5% 0 5%;        
+      }
+   }
+}
+/*======================*/
 .title {
    font-size: 24px;
    text-align: center;
    padding: 30px 0 30px 0;
 }
-
-
 
 /*----------import-----------*/
 @import "time";
