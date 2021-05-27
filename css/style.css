@@ -77,6 +77,9 @@ body {
   max-width: 1200px;
   background: #A4EFF9;
   overflow: hidden;
+  background: url(/img/bg.jpeg) no-repeat center;
+  background-size: cover;
+  min-height: 100vh;
 }
 
 .welcome {

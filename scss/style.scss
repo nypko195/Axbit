@@ -21,9 +21,13 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit;}
 body {
    max-width: 1200px;
    background: #A4EFF9;  
-   overflow: hidden; 
+   overflow: hidden;   
+   background: url(/img/bg.jpeg) no-repeat center;
+   background-size: cover;
+	min-height: 100vh;
 }
 .welcome {
+  
    display: flex;
    flex-direction: column;
    background: #fff;

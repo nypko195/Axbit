@@ -45,7 +45,7 @@ function sendForm(e) {
 
          const sity = data.name;
          const degree = data.main.temp; 
-
+         
          localStorage.setItem(sity, degree); 
 
          document.querySelector('.weather__result-city').innerHTML = sity;
