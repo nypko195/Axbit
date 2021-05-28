@@ -4,11 +4,17 @@
    flex-direction: column;
    background: #fff;
    width: 33%;
-   height: 33%;
+   min-height: 33%;
    border-radius: 10px;
    margin: 0 auto;
-   margin-top: 10%;  
-   &__result {      
+   margin-top: 10%;
+   padding-bottom: 5%;  
+   &__list {      
+      display: flex;
+      flex-direction: row;
+      justify-content: center;       
+   }
+   &__list {      
       display: flex;
       flex-direction: row;
       justify-content: center;       
@@ -24,8 +30,7 @@
       margin: 0 0 0 20px;      
       padding: 10px;
    }
-   &__result-close {
-      display: none;
+   &__result-close {      
       padding: 3px;
       cursor: pointer;
    }
@@ -157,12 +162,5 @@
    }
 }
 /*======================*/
-.active {  
-   display: flex;   
-}
-
-.no-active {
-   display: none;
-}
 
 

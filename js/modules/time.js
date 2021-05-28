@@ -18,8 +18,11 @@ setInterval(() => {
 },0);
 
 //добавление нуля
+
 function getZero(num) {
-   if(num >= 0 && num < 10) {
+   const isOneDigitNumber = (num >= 0 && num < 10);
+
+   if(isOneDigitNumber) {
       return `0${num}`;
       } else {
          return num;

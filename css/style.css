@@ -75,6 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------*/
 body {
   max-width: 1200px;
+  margin: 0 auto;
   background: #A4EFF9;
   overflow: hidden;
   background: url(/img/bg.jpeg) no-repeat center;
@@ -231,10 +232,11 @@ body {
           flex-direction: column;
   background: #fff;
   width: 33%;
-  height: 33%;
+  min-height: 33%;
   border-radius: 10px;
   margin: 0 auto;
   margin-top: 10%;
+  padding-bottom: 10%;
 }
 
 .weather__result {
@@ -262,8 +264,7 @@ body {
   padding: 10px;
 }
 
-.weather__result-close {
-  display: none;
+.weather__result-close {  
   padding: 3px;
   cursor: pointer;
 }
@@ -417,14 +418,4 @@ body {
 }
 
 /*======================*/
-.active {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.no-active {
-  display: none;
-}
-
 /*--------------------*/
