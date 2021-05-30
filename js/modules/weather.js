@@ -9,7 +9,7 @@ function getLocal() {
    for (let i = 0; i < localStorage.length; i++) {
       let key = localStorage.key(i);
       let value = localStorage.getItem(key);      
-      showLocalWeatherCity(key, value);
+      showLocalWeatherCity(key, value);          
    }
 
    function showLocalWeatherCity(key, value) {
@@ -20,11 +20,9 @@ function getLocal() {
          <span class="weather__result-close">x</span>
       </div>
       `);      
-   } 
+   }   
 }
 getLocal();
-
-
 
 //форма 
 btnWeather.addEventListener('click', sendForm)
@@ -67,12 +65,13 @@ function sendForm(e) {
          const sity = data.name;
          const degree = data.main.temp;
 
-         // localStorage.setItem(sity, degree);
+         localStorage.setItem(sity, degree);
 
-         new InfoCity(sity, degree, '.weather__list').renderNewWeatherCity();         
+         new InfoCity(sity, degree, '.weather__list').renderNewWeatherCity(); 
+
          removeWeatherCity();
-
-         inputWeatherSity.value = '';
+         
+         inputWeatherSity.value = '';                              
       })
       .catch(() => {
          errorShow();
@@ -81,18 +80,20 @@ function sendForm(e) {
       })
 }
 
-
 function removeWeatherCity() {
    const selectedWeather = document.querySelectorAll('.weather__result');      
    selectedWeather.forEach(item => {
-      item.addEventListener('click', e => {         
-         if(e.target == item)
-         console.log(item);
-         item.remove();   
-      });
+      item.addEventListener('click', e => {                
+         item.remove();
+
+         for (let i = 0; i < localStorage.length; i++){        
+            let key = localStorage.key(i);           
+            localStorage.removeItem(key);            
+         }        
+      });      
    })
 }
 
-
+removeWeatherCity();
 
 
