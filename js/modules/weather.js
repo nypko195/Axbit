@@ -1,26 +1,14 @@
-const modal = document.querySelector('.weather__modal'),
-      inputWeatherSity = document.querySelector('.weather__item-inp'),
+const inputWeatherSity = document.querySelector('.weather__item-inp'),
       btnWeather = document.querySelector('.weather__item-btn'),
-      resultBd = document.querySelector('.weather__list'),
-      closeResultBd = document.querySelector('.weather__result-close');      
+      resultBd = document.querySelector('.weather__list');      
 
 //загрузка из localStorage
 function getLocal() {
    for (let i = 0; i < localStorage.length; i++) {
       let key = localStorage.key(i);
       let value = localStorage.getItem(key);      
-      showLocalWeatherCity(key, value);          
-   }
-
-   function showLocalWeatherCity(key, value) {
-      resultBd.insertAdjacentHTML('afterbegin', `
-      <div class="weather__result">
-         <p class="weather__result-city">${key}</p>
-         <p class="weather__result-degree">${Math.round(value)} C</p> 
-         <span class="weather__result-close">x</span>
-      </div>
-      `);      
-   }   
+      showWeatherLocal(key, value);
+   }    
 }
 getLocal();
 
@@ -47,6 +35,7 @@ function sendForm(e) {
          `);
       }
    }
+
    //==Ответ с БД==                     
    let city = inputWeatherSity.value;
 
@@ -80,20 +69,35 @@ function sendForm(e) {
       })
 }
 
+//удаление погоды по клику
 function removeWeatherCity() {
-   const selectedWeather = document.querySelectorAll('.weather__result');      
+   const selectedWeather = document.querySelectorAll('.weather__result');         
    selectedWeather.forEach(item => {
       item.addEventListener('click', e => {                
-         item.remove();
-
-         for (let i = 0; i < localStorage.length; i++){        
-            let key = localStorage.key(i);           
-            localStorage.removeItem(key);            
-         }        
+         item.remove(); 
+         removeWeatherLocalStorage(e.target.innerText)       
       });      
    })
 }
-
 removeWeatherCity();
+
+//удаление из localStorage
+function removeWeatherLocalStorage(target) {             
+   localStorage.removeItem(target);   
+}
+
+//показ погоды из localStorage
+function showWeatherLocal(key, value) {
+   resultBd.insertAdjacentHTML('afterbegin', `
+   <div class="weather__result">
+      <p class="weather__result-city">${key}</p>
+      <p class="weather__result-degree">${Math.round(value)} C</p> 
+      <span class="weather__result-close">x</span>
+   </div>
+   `);      
+} 
+
+
+
 
 

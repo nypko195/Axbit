@@ -76,8 +76,6 @@ h1, h2, h3, h4, h5, h6 {
 body {
   max-width: 1200px;
   margin: 0 auto;
-  background: #A4EFF9;
-  overflow: hidden;
   background: url(/img/bg.jpeg) no-repeat center;
   background-size: cover;
   min-height: 100vh;
@@ -92,8 +90,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #fff;
-  width: 33%;
-  height: 33%;
+  width: 50%;
+  height: 50%;
   border-radius: 10px;
   margin: 0 auto;
   margin-top: 10%;
@@ -137,7 +135,7 @@ body {
   text-transform: uppercase;
 }
 
-/*======================*/
+/*--------------------*/
 @media (max-width: 992px) {
   .welcome__nav {
     -webkit-box-orient: vertical;
@@ -156,7 +154,7 @@ body {
   }
 }
 
-/*======================*/
+/*--------------------*/
 .title {
   font-size: 24px;
   text-align: center;
@@ -174,8 +172,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #fff;
-  width: 33%;
-  height: 33%;
+  width: 50%;
+  height: 50%;
   border-radius: 10px;
   margin: 0 auto;
   margin-top: 10%;
@@ -199,7 +197,7 @@ body {
   left: 15px;
 }
 
-/*======================*/
+/*--------------------*/
 @media (max-width: 992px) {
   .time__block-timer span {
     font-size: 36px;
@@ -231,8 +229,8 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   background: #fff;
-  width: 33%;
-  min-height: 33%;
+  width: 50%;
+  min-height: 50%;
   border-radius: 10px;
   margin: 0 auto;
   margin-top: 10%;
@@ -333,7 +331,7 @@ body {
   left: 15px;
 }
 
-/*======================*/
+/*--------------------*/
 @media (max-width: 992px) {
   .weather__result {
     width: 90%;
@@ -356,7 +354,6 @@ body {
   }
   .weather__result-close {
     position: absolute;
-    display: none;
     padding: 3px;
     cursor: pointer;
     top: 20%;
@@ -400,7 +397,6 @@ body {
   }
   .weather__result-close {
     position: absolute;
-    display: none;
     padding: 3px;
     cursor: pointer;
     top: 13%;
@@ -432,5 +428,4 @@ body {
   }
 }
 
-/*======================*/
 /*--------------------*/
